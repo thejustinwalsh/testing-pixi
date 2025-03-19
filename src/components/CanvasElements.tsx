@@ -51,11 +51,11 @@ export const CanvasElements = ({data}: CanvasElementsProps) => {
 		window.addEventListener("resize", handleResize);
 		console.log(data)
 		return () => window.removeEventListener("resize", handleResize);
-	},[]);
+	},[]); // eslint-disable-line react-hooks/exhaustive-deps -- onMount
 
 	useLayoutEffect(() => {
 		handleResize();
-	}, []);
+	}, []); // eslint-disable-line react-hooks/exhaustive-deps -- onMount
 
 	return (
 		<PixiViewport viewPortInit={viewportInit}>

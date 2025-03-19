@@ -39,7 +39,7 @@ export const Container = () => {
 			<div>
 				{SPACE.map((space) => {
 					return (
-						<button onClick={() => setActiveSpace(space.id)}>{space.name}</button>
+						<button key={space.id} onClick={() => setActiveSpace(space.id)}>{space.name}</button>
 					);
 				})}
 			</div>
